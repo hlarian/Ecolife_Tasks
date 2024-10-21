@@ -58,6 +58,7 @@ Here are some tasks for you.
 - **Change DPSO to other heuristic algorithms**. If you don't know what's a heuristic algorithm, check this: link(https://optimization.cbe.cornell.edu/index.php?title=Heuristic_algorithms)
   Note that, you may need to **compare the results with DPSO** in Ecolife. **Plotting a bar figure** is a good way to try.
 - Don't use 12 days for simulation, it will take 2-3 days. **Just use one day**.
+- If you have any questions, contact me! jiang.yank@northeastern.edu
 
 
 
