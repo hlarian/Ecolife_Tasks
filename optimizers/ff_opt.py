@@ -150,7 +150,7 @@ class optimizer_FF:
             
 
         # Calculate the total execution time
-        total_execution_time = time.time() - total_start_time
+        total_execution_time = (time.time() - total_start_time)/3600
 
         self.save_results(result_carbon, result_st)
 
@@ -161,9 +161,7 @@ class optimizer_FF:
         print(f"Total Functions Invoked: {sum1}")
         print(f"Average Service Time per Function: {avg_service_time}")
         print(f"Average Carbon Footprint per Function: {avg_carbon_footprint}")
-        #print(f"Total Discarded Functions: {total_discarded}")
-        #print(f"Memory Adjustments: {len(discard_list)}")
-        print(f"Total Execution Time: {total_execution_time:.2f} seconds")    
+        print(f"Total Execution Time: {total_execution_time:.2f} Hours")    
         print(f"\n=== Firefly Optimization Completed Successfully ===")
 
     def check_warm_pool_expiry(self, i, old_warm_pool, new_warm_pool, result_carbon, function_name, j):

@@ -241,7 +241,7 @@ class tech:
                 print(f"current service time is:{sum_st/sum1}, carbon is: {sum_carbon/sum1}")
 
          # Calculate the total execution time
-        total_execution_time = time.time() - total_start_time
+        total_execution_time = (time.time() - total_start_time)/3600
 
         print(f"service time is:{sum_st/sum1}, carbon is: {sum_carbon/sum1}")
         with open(f"{Path(__file__).parents[1]}/results/eco_life/carbon.json", "w") as file:
@@ -256,7 +256,5 @@ class tech:
         print(f"Total Functions Invoked: {sum1}")
         print(f"Average Service Time per Function: {avg_service_time}")
         print(f"Average Carbon Footprint per Function: {avg_carbon_footprint}")
-        #print(f"Total Discarded Functions: {total_discarded}")
-        #print(f"Memory Adjustments: {len(discard_list)}")
-        print(f"Total Execution Time: {total_execution_time:.2f} seconds")
+        print(f"Total Execution Time: {total_execution_time:.2f} Hours")
         print(f"\n=== EcoLife Optimization Completed Successfully ===")
