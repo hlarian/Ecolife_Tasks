@@ -243,6 +243,12 @@ class tech:
          # Calculate the total execution time
         total_execution_time = time.time() - total_start_time
 
+        print(f"service time is:{sum_st/sum1}, carbon is: {sum_carbon/sum1}")
+        with open(f"{Path(__file__).parents[1]}/results/eco_life/carbon.json", "w") as file:
+            json.dump(result_carbon, file, indent=4)
+        with open(f"{Path(__file__).parents[1]}/results/eco_life/st.json", "w") as file:
+            json.dump(result_st, file, indent=4)
+
         # Final summary of results
         avg_service_time = sum_st / sum1 if sum1 > 0 else 0
         avg_carbon_footprint = sum_carbon / sum1 if sum1 > 0 else 0
@@ -250,16 +256,7 @@ class tech:
         print(f"Total Functions Invoked: {sum1}")
         print(f"Average Service Time per Function: {avg_service_time}")
         print(f"Average Carbon Footprint per Function: {avg_carbon_footprint}")
-        print(f"Total Discarded Functions: {total_discarded}")
-        print(f"Memory Adjustments: {len(discard_list)}")
+        #print(f"Total Discarded Functions: {total_discarded}")
+        #print(f"Memory Adjustments: {len(discard_list)}")
         print(f"Total Execution Time: {total_execution_time:.2f} seconds")
-    
-        self.save_results(result_carbon, result_st)
         print(f"\n=== EcoLife Optimization Completed Successfully ===")
-
-
-        print(f"service time is:{sum_st/sum1}, carbon is: {sum_carbon/sum1}")
-        with open(f"{Path(__file__).parents[1]}/results/eco_life/carbon.json", "w") as file:
-            json.dump(result_carbon, file, indent=4)
-        with open(f"{Path(__file__).parents[1]}/results/eco_life/st.json", "w") as file:
-            json.dump(result_st, file, indent=4)
